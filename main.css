@@ -1,0 +1,242 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+
+}
+
+
+
+
+
+
+/* Encabezado */
+
+header{
+    grid-area: header;
+}
+
+.encabezado{
+   display: grid;
+   grid-template-areas: 
+    "logo texto  redes";
+    grid-template-columns: 30% auto 30%; 
+}
+
+
+#logo{
+    grid-area: logo;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fotologo{
+   
+    width: 35%;
+    object-fit: cover;
+
+}
+
+#texto {
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    color: rgb(21, 97, 184);
+    justify-content: space-around;
+    align-items: center;
+}
+
+#texto h1{
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 30px;
+    
+    padding: 10px;
+    margin: 0px;
+   
+}
+
+#texto h2{
+    
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    padding: 10px;
+    margin: 0px;
+    color: black;
+}
+
+#redes {
+    grid-area: redes;
+    
+  
+
+    
+}   
+
+/* Navegador */
+
+nav{
+        grid-area: nav;
+        background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
+        background-color: #252323;
+        background-size: 20px 20px;
+        padding: 0px;
+        margin: 0px;
+           
+    }
+    
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+         
+        }
+    
+    #menu li a{
+        padding: 10px;
+        margin: 2px; 
+        color: white;
+    }
+    
+    .navegacion ul, li a {
+        list-style: none;
+        text-decoration: none;
+    }
+    
+     
+        estados hover de los link 
+    li:hover a {
+        background: darkgrey;
+    }
+    
+    /* estilos del estado hover del dropdown*/
+    li:hover ul a:hover {
+        background: darkgray;
+        color: #fff;
+    }
+    
+  
+    /* Estilo de .muestra-menu */
+    .show-menu {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-decoration: none;
+        color: #fff;
+        background: 
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 60%, transparent 85%, #242424 75%, #242424);
+        background-color: #252323;
+        background-size: 20px 20px;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+        transition:all 0.5s ease;
+    }
+    
+    
+    /*Oculta el checkbox*/
+    input[type=checkbox]{
+        display: none;
+    }
+    
+    /* muestra el menu cuando el checkbox is checked*/
+    input[type=checkbox]:checked ~ #menu{
+        display: block;
+    }
+    
+    
+    /* estilos responsive */
+    
+    @media screen and (max-width : 760px){
+        /*Hace que el dropdown links aparescan en linea */
+        #menu {
+            position: static;
+            display: none;
+        }
+        /*Crea espacio vertical */
+        li {
+            margin-bottom: 3px;
+        }
+        /* crea todo el menu links  ancho full*/
+        ul li {
+            width: 100%;
+        }
+        /*Display '.muestra-menu' link*/
+        .show-menu {
+            display:block;
+        }
+
+        #texto h1{
+            font-weight: 200;
+            font-size: 22px;
+            padding: 10px;
+            
+        }
+        
+        #texto h2{
+
+            font-weight: 200;
+            font-size: 18px;
+            padding: 15px;
+            
+        }
+
+        #fotologo{
+   
+            width: 80%;
+            object-fit: contain;
+        }
+
+
+/* Grilla General  Servicios */
+
+.grillaservicios{
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "form form form"
+        "footer footer footer";
+    grid-template-columns: 30% auto 30%;
+    max-width: 1200px;
+    background-color:antiquewhite;
+    justify-content: center;
+    margin: 0px;
+    gap: 1px;
+}
+
+
+
+
+
+
+    } 
+
+
+form{
+    grid-area: form;
+}
+
+
+
+footer{
+    grid-area: footer;
+}
+
